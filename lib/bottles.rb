@@ -1,12 +1,7 @@
 class Bottles
-
-	def initialize	 
-	end
-
 	def vessel(amt)
 		amt == 1 ? 'bottle' : 'bottles'
 	end
-
 
 	def next_amt(start_amt)
 		if start_amt >1
@@ -41,12 +36,11 @@ class Bottles
 		reduction_amount_word = reduction_amount_word(start_amt)
 		start_phrase = start_phrase(start_amt)
 		line2Phrase1 = buildLine2Phrase1(start_amt,reduction_amount_word)
-		# puts start_amt
+		
 		verse =	<<-VERSE
 #{start_phrase.capitalize} #{start_vessel} of beer on the wall, #{start_phrase} #{start_vessel} of beer.
 #{line2Phrase1}, #{next_amt} #{next_vessel} of beer on the wall.
 VERSE
-		 
 	end
 
 	def verses(start_verse, end_verse)
@@ -61,6 +55,4 @@ VERSE
 	def song
 		verses(99,0)
 	end
-
-
 end
