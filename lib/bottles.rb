@@ -50,18 +50,17 @@ VERSE
 	end
 
 	def verses(start_verse, end_verse)
-		# "hello".chars.map { |c| "-#{c}" }.join
 		compiled_verse = ''
 		for v in start_verse.downto(end_verse) do
 			compiled_verse += self.verse(v)
 			compiled_verse += "\n"
 		end
-		
-		puts "STARTVERSE: #{start_verse}"
-		puts "ENDVERSE: #{end_verse}"
-		puts "COMPILED VERSE: "
-		puts "#{compiled_verse}"
 		return compiled_verse.chomp
 	end
+
+	def song
+		verses(99,0)
+	end
+
 
 end
